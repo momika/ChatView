@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MessageBottomBarView">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3l-WK-8fS">
+                    <rect key="frame" x="5" y="8" width="34" height="34"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="EkN-AX-jfM"/>
+                        <constraint firstAttribute="width" constant="34" id="SuA-OV-a27"/>
+                    </constraints>
+                    <state key="normal" image="chat_bottom_voice_nor"/>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lxl-V4-rb3">
+                    <rect key="frame" x="49" y="10" width="170" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="v0v-0C-Jd5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2c-r5-LHR">
+                    <rect key="frame" x="273" y="8" width="34" height="34"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="3Ow-1z-VX1"/>
+                        <constraint firstAttribute="width" constant="34" id="SuP-tc-Dsa"/>
+                    </constraints>
+                    <state key="normal" image="chat_bottom_up_nor"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWj-eg-muP">
+                    <rect key="frame" x="229" y="8" width="34" height="34"/>
+                    <animations/>
+                    <state key="normal" image="chat_bottom_smile_nor"/>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="W2c-r5-LHR" firstAttribute="leading" secondItem="jWj-eg-muP" secondAttribute="trailing" constant="10" id="2GH-bI-G6z"/>
+                <constraint firstItem="Z3l-WK-8fS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6Jt-lw-c8N"/>
+                <constraint firstItem="Z3l-WK-8fS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="Azb-JF-6gA"/>
+                <constraint firstItem="Lxl-V4-rb3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="C8j-JT-IWD"/>
+                <constraint firstItem="W2c-r5-LHR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="GHM-TO-lQA"/>
+                <constraint firstItem="W2c-r5-LHR" firstAttribute="top" secondItem="jWj-eg-muP" secondAttribute="top" id="KGx-Ge-o9V"/>
+                <constraint firstItem="jWj-eg-muP" firstAttribute="leading" secondItem="Lxl-V4-rb3" secondAttribute="trailing" constant="10" id="Q9B-7t-osF"/>
+                <constraint firstAttribute="trailing" secondItem="W2c-r5-LHR" secondAttribute="trailing" constant="5" id="W1a-0g-yS5"/>
+                <constraint firstItem="Lxl-V4-rb3" firstAttribute="leading" secondItem="Z3l-WK-8fS" secondAttribute="trailing" constant="10" id="Zy2-L1-ked"/>
+                <constraint firstItem="W2c-r5-LHR" firstAttribute="bottom" secondItem="jWj-eg-muP" secondAttribute="bottom" id="tQ1-8l-7Xb"/>
+                <constraint firstItem="W2c-r5-LHR" firstAttribute="width" secondItem="jWj-eg-muP" secondAttribute="width" id="vqg-GM-iWA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="messageTextField" destination="Lxl-V4-rb3" id="BDQ-EP-mFn"/>
+            </connections>
+            <point key="canvasLocation" x="146" y="39"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chat_bottom_smile_nor" width="34" height="34"/>
+        <image name="chat_bottom_up_nor" width="34" height="34"/>
+        <image name="chat_bottom_voice_nor" width="34" height="34"/>
+    </resources>
+</document>
